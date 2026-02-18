@@ -1,0 +1,55 @@
+{
+  // Where LaTeX Workshop should put build files (PDF, logs, aux, etc.)
+  "latex-workshop.latex.outDir": "./build",
+
+  // Automatically compile when saving
+  "latex-workshop.latex.autoBuild.run": "onSave",
+
+  // Use PDF preview inside VS Code tab
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  // Define how to compile your document
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (Linux)",
+      "tools": ["latexmk", "pdf linux"]
+    },
+    {
+      "name": "latexmk (Windows)",
+      "tools": ["latexmk", "pdf windows"]
+    }
+  ],
+
+  // Define the actual tool chain LaTeX Workshop will use
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-pdf",                     // Build to PDF
+        "-interaction=nonstopmode", // Keep running even on errors
+        "-synctex=1",               // Enable SyncTeX (jump between source and PDF)
+        "-outdir=./build",          // Output folder
+        "%DOC%"                     // Current LaTeX file
+      ]
+    },
+    {
+      "name": "pdf windows",
+      "command": "copy",
+      "args": ["%OUTDIR_W32%\\%DOCFILE%.pdf", "%DIR_W32%\\"]
+    },
+    {
+      "name": "pdf linux",
+      "command": "cp",
+      "args": ["%OUTDIR%/%DOCFILE%.pdf", "%DIR%/"]
+    }
+
+  ],
+
+  // text wrapping in latex
+  "[latex]": {
+    "editor.wordWrap": "on"
+  }
+
+
+}

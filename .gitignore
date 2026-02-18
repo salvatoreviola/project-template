@@ -1,0 +1,24 @@
+# Python virtual environments
+.venv/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Data files
+/data/API/
+/data/raw/
+/data/clean/
+/data/temp/
+/data/lake/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+
+# Readme.ipynb draft
+README.ipynb
+
+# Latex build
+paper/build/
+presentation/build/
