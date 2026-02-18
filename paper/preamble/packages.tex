@@ -1,0 +1,32 @@
+\usepackage[T1]{fontenc}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage{amsmath}
+
+
+\usepackage[backend=biber, 
+    style=apa, 
+    maxcitenames=2, 
+    hyperref=true,
+    sorting=ynt
+    ]{biblatex}
+\DeclareLanguageMapping{american}{english-apa}
+\addbibresource{bib/bib.bib}
+
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[margin=1 in]{geometry}
+\usepackage[para]{threeparttable}
+
+\usepackage{authblk}
+\renewcommand\Affilfont{\small} 
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,    % Enable colored links
+    linkcolor=blue,     % Color for internal links
+    citecolor=blue,     % Color for citation links
+    urlcolor=blue       % Color for URLs
+}

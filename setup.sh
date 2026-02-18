@@ -46,6 +46,7 @@ fi
 
 echo "================================="
 echo "Setup complete."
+echo "If experiencing complications, restart VS Code"
 echo "To activate the environment later:"
 echo "source .venv/bin/activate"
 echo "================================="
