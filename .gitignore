@@ -5,11 +5,10 @@
 .ipynb_checkpoints/
 
 # Data files
-/data/API/
-/data/raw/
-/data/clean/
-/data/temp/
-/data/lake/
+#/data/raw/
+#/data/clean/
+#/data/temp/
+#/data/lake/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
