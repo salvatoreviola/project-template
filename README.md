@@ -2,7 +2,12 @@
 
 This repository provides a ready-made file system within VS Code to develop an empirical project within economics. The intention of this repository is stardize my personal workflow within VS Code to streamline the initiation of future project. The repository supplies a project structure which includes separate spaces for data, empirical analysis, test spaces, Latex-based document editing, Beamer-style presentation creation, reproducible workflows (src), Stata script execution and utility. With the ```setup.sh``` script, this repo should intiailize a workspace in VS Code which allows users to conduct a single project, start to finish, within a single, integrated coding environment (IDE) that is compataible with common academic/economic workflows as well as git-trackable.  
 
-## File Stystem 
+## Installation
+
+This repository contains a
+## Overview
+
+### File Stystem 
 ```
 
 ├── config.py
