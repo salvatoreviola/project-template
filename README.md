@@ -10,52 +10,48 @@ Eventually, the scripts will be updated and tested to work on Windows, Mac and L
 
 ## Dependencies
 
-- Visual Studio Code
-- Tex Live 
-- Python
-- Stata
-- Git
+- Visual Studio Code (https://code.visualstudio.com/)
+- Tex Live (https://www.tug.org/texlive/)
+- Python (https://www.python.org/)
+- Stata (https://www.stata.com/)
+- Git (https://git-scm.com/)
 
 ## Overview
 
 ### File Stystem 
 ```
-
-├── config.py
+project-template/
 ├── data
+│   ├── clean
 │   ├── lake
-│   │   ├── gold
-│   │   └── silver
-│   └── raw
+│   ├── raw
+│   └── temp
 ├── output
 │   ├── figures
 │   └── tables
 ├── paper
 │   ├── bib
-│   │   └── bib.bib
-│   ├── main.pdf
-│   ├── main.tex
+│   ├── build
 │   ├── preamble
-│   │   ├── macros.tex
-│   │   └── packages.tex
-│   └── sections
-│       ├── 00-titlepage.tex
-│       └── 01-introduction.tex
+│   ├── sections
+│   ├── main.pdf
+│   └── main.tex
 ├── presentation
-│   ├── main.pdf
-│   ├── main.tex
+│   ├── build
 │   ├── preamble
-│   │   ├── beamer_theme.tex
-│   │   ├── macros.tex
-│   │   └── packages.tex
-│   └── sections
-│       └── 00-intro.tex
-├── README.md
+│   ├── sections
+│   ├── main.pdf
+│   └── main.tex
 ├── sandbox
+│   ├── test.ipynb
 │   └── test.py
-├── setup.sh
-└── src
-    └── stata-example.ipynb
+├── src
+│   ├── __pycache__
+│   ├── config.py
+│   └── stata-example.ipynb
+├── main-setup.sh
+├── README.md
+└── setup.sh
 
 ```
 
