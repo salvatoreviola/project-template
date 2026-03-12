@@ -1,12 +1,20 @@
-# Standard Academic Project Template in Economics
+# Academic Project Template for Economics
 
-This repository provides a ready-made file system within VS Code to develop an empirical project within economics. The intention of this repository is stardize my personal workflow within VS Code. The repository supplies a project structure which includes separate spaces for data, empirical analysis, test spaces, Latex-based document editing, Beamer-style presentation creation, reproducible workflows (src), Stata script execution and utility. With the ```setup.sh``` script, this repo should intiailize a workspace in VS Code which allows users to conduct a single project, start to finish, within a single, integrated coding environment (IDE) that is compataible with common academic/economic workflows as well as git-trackable.  
+A VS Code project template for empirical economics workflows, including data organization, Python and Stata scripts, LaTeX papers, Beamer presentations, and reproducible project paths.
 
-## Installation
+## Status
 
-THIS REPOSITORY IS STILL EXPERIMENTAL. HAVE A LOOK AT THE FOLDERS AND FILES BUT DO NOT RUN THE BASH ```.sh``` SCRIPTS ON YOUR MACHINE.
+This repository is experimental. The folder structure is usable for reference, but the setup scripts are not yet ready to run on a new machine.
 
-Eventually, the scripts will be updated and tested to work on Windows, Mac and Linux.
+## What’s Included
+
+- Standard folders for `raw`, `clean`, `temp`, and `lake` data
+- Separate `paper/` and `presentation/` LaTeX projects
+- A `src/` directory for production code
+- A `sandbox/` directory for quick tests and experiments
+- VS Code settings for Python and LaTeX workflows
+- Git ignore rules for artifacts, cache files, and data
+
 
 ## Dependencies
 
@@ -16,49 +24,12 @@ Eventually, the scripts will be updated and tested to work on Windows, Mac and L
 - Stata (https://www.stata.com/)
 - Git (https://git-scm.com/)
 
-## Overview
 
-### File Stystem 
-```
-project-template/
-├── data
-│   ├── clean
-│   ├── lake
-│   ├── raw
-│   └── temp
-├── output
-│   ├── figures
-│   └── tables
-├── paper
-│   ├── bib
-│   ├── build
-│   ├── preamble
-│   ├── sections
-│   ├── main.pdf
-│   └── main.tex
-├── presentation
-│   ├── build
-│   ├── preamble
-│   ├── sections
-│   ├── main.pdf
-│   └── main.tex
-├── sandbox
-│   ├── test.ipynb
-│   └── test.py
-├── src
-│   ├── __pycache__
-│   ├── config.py
-│   └── stata-example.ipynb
-├── main-setup.sh
-├── README.md
-└── setup.sh
-
-```
-
+## Folders
 
 ### .vscode/
 
-The .vscode file contains the configuration for VS Code. In this example repository, the settings.yaml is mainly used to tell Latex (in this case Tex Live) how to compile latex files and where to store the output. As is, latex project in the presentation and paper folders are compiled whenever a .tex file from that folder is saved. The "build" files from the compilation are stored in another folder called "build" and can be ignored. settings.yaml also contains code which tells VS Code where to look for Python. 
+The .vscode file contains the configuration for VS Code. In this example repository, the settings.json is mainly used to tell Latex (in this case Tex Live) how to compile latex files and where to store the output. As is, latex project in the presentation and paper folders are compiled whenever a .tex file from that folder is saved. The "build" files from the compilation are stored in another folder called "build" and can be ignored. settings.json also contains code which tells VS Code where to look for Python. 
 
 Also in the .vscode folder is a extensions.json file. There contains some of extensions which are necessary for working with Python and Latex in VS Code.
 
