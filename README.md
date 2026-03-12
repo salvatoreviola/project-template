@@ -1,12 +1,20 @@
 # Standard Academic Project Template in Economics
 
-This repository provides a ready-made file system within VS Code to develop an empirical project within economics. The intention of this repository is stardize my personal workflow within VS Code to streamline the initiation of future project. The repository supplies a project structure which includes separate spaces for data, empirical analysis, test spaces, Latex-based document editing, Beamer-style presentation creation, reproducible workflows (src), Stata script execution and utility. With the ```setup.sh``` script, this repo should intiailize a workspace in VS Code which allows users to conduct a single project, start to finish, within a single, integrated coding environment (IDE) that is compataible with common academic/economic workflows as well as git-trackable.  
+This repository provides a ready-made file system within VS Code to develop an empirical project within economics. The intention of this repository is stardize my personal workflow within VS Code. The repository supplies a project structure which includes separate spaces for data, empirical analysis, test spaces, Latex-based document editing, Beamer-style presentation creation, reproducible workflows (src), Stata script execution and utility. With the ```setup.sh``` script, this repo should intiailize a workspace in VS Code which allows users to conduct a single project, start to finish, within a single, integrated coding environment (IDE) that is compataible with common academic/economic workflows as well as git-trackable.  
 
 ## Installation
 
-REPOSITORY IS STILL EXPERIMENTAL. HAVE A LOOK AT THE FOLDERS AND FILES BUT DO NOT RUN THE BASH ```.sh``` SCRIPTS ON YOUR MACHINE.
+THIS REPOSITORY IS STILL EXPERIMENTAL. HAVE A LOOK AT THE FOLDERS AND FILES BUT DO NOT RUN THE BASH ```.sh``` SCRIPTS ON YOUR MACHINE.
+
+Eventually, the scripts will be updated and tested to work on Windows, Mac and Linux.
 
 ## Dependencies
+
+- Visual Studio Code
+- Tex Live 
+- Python
+- Stata
+- Git
 
 ## Overview
 
@@ -52,37 +60,43 @@ REPOSITORY IS STILL EXPERIMENTAL. HAVE A LOOK AT THE FOLDERS AND FILES BUT DO NO
 ```
 
 
-### .vscode
+### .vscode/
 
 The .vscode file contains the configuration for VS Code. In this example repository, the settings.yaml is mainly used to tell Latex (in this case Tex Live) how to compile latex files and where to store the output. As is, latex project in the presentation and paper folders are compiled whenever a .tex file from that folder is saved. The "build" files from the compilation are stored in another folder called "build" and can be ignored. settings.yaml also contains code which tells VS Code where to look for Python. 
 
 Also in the .vscode folder is a extensions.json file. There contains some of extensions which are necessary for working with Python and Latex in VS Code.
 
-### data
+### data/
 
 The data folder contains a number of subfolders which reflect how I (currently) like to organize my data. Raw for all of the raw files, lake for partitioned datasets that I want to query in SQL, clean for final datasets, and temp for anything in between. 
 
-### output
+### output/
 
 The output folder like the data folder, has some subfolders for storing results from estimations and graphical commands. I think its pretty self explanatory.
 
-### paper
+### paper/
 
 The paper folder is a self-contained, academic-style latex manuscript. There is a bib folder for a .bib file, a build folder where latex compilation artifacts go, preamble and section folders as well as a main.tex and main.pdf file. the preamble folder contains .tex files which can be used to set up the your latex environment for the paper. Examples are included. The sections folder, contains .tex files for each of the parts of the paper. In this way, you can edit single sections of you document individually. Finally, the main.tex file sews all of the configuration and section files together and gets compiled into main.pdf.  The structure is flexible, but I think this approach helps to keep everything organized.
 
-### presentation
+### presentation/
 
 The presentation folder is a self-contained, academic-style latex/beamer presentation. It is structure very similarly to the paper folder. You can configure you settings in the various .tex files in the preamble folder and structure sections in the sections folder. One thing to note, is that the presentation folder uses the same .bib file from the paper folder.
 
 
-### sandbox
+### sandbox/
 
 The sandbox folder is a "sandbox". It's where you can test some code separately from you main, polished files. I don't really know if this is conventional, but I have come across it in other projects and it helps to isolate and maintain working scripts in a safe place. For now, it only contains a test.py file which ensures that folder and file paths can be correctly imported and that python is working.
 
 
-### src
+### src/
 
 src is short for source. In conventional programming (not really the same as the scripting that PhDs in economics do), this is the standard name for the "final" code directory. This folder is meant to contain all of the code/scripts that are working correctly and you would ultimately include in a replication package. It contains a stata-example.ipynb jupyter notebook file which gives instruction on how to execute Stata code from Python.
+
+
+### config.py
+
+config.py is a file which I use to set the paths for my entire project. It is short and simple. All it does is define the paths to the folders that I will need to access when working with data and storing outputs. It should automatically point to the folders in this repository without any additional setup. 
+
 
 ### .env.example
 
@@ -92,10 +106,6 @@ src is short for source. In conventional programming (not really the same as the
 ### .gitignore
 
 .gitignore is another sort of configuration file used with git. If you are have initiallized git in you project folder, all of the changes you make will be "tracked". In VS Code, you can tell when you have created a new file or made changes to one based on the color of the file name and the letter which appears next to it. The .gitignore file tells git which files not to track. As a result, these files will not be backed up to github. In this example, artifact (e.g., build) and cache (e.g., __pylance__) files and folders are ignored as well as most of the data folder. The data folder will almost certainly be the largest part of your project and will likely exhaust the amount of free storage that github gives you (it's not designed for large files and there's usually no reason to track changes in data files). Notice that in the example, there .env and .venv files are also ignored. The .env.example section explained why in the case of .env files. As for .venv, this may or may not apply to you, but either way, there's no reason to back it up.
-
-### config.py
-
-config.py is a file which I use to set the paths for my entire project. It is short and simple. All it does is define the paths to the folders that I will need to access when working with data and storing outputs. It should automatically point to the folders in this repository without any additional setup. 
 
 
 ### main-setup.sh & setup.sh
