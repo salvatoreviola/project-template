@@ -49,7 +49,19 @@
   // text wrapping in latex
   "[latex]": {
     "editor.wordWrap": "on"
-  }
+  },
+
+  // Load environment variables from project root
+  "python.envFile": "${workspaceFolder}/.env",
+
+  // Let imports like `from config import ...` resolve across the workspace
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}",
+    "${workspaceFolder}/src"
+  ],
+
+  // Run Python files from workspace root to keep relative paths stable
+  "python.terminal.executeInFileDir": false
 
 
 }

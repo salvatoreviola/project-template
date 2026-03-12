@@ -4,7 +4,7 @@ This repository provides a ready-made file system within VS Code to develop an e
 
 ## Installation
 
-This repository contains a
+REPOSITORY IS STILL EXPERIMENTAL. HAVE A LOOK AT THE FOLDERS AND FILES BUT DO NOT RUN THE BASH ```.sh``` SCRIPTS ON YOUR MACHINE.
 ## Overview
 
 ### File Stystem 
