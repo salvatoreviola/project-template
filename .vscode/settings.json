@@ -52,6 +52,7 @@
   },
 
   // Load environment variables from project root
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
   "python.envFile": "${workspaceFolder}/.env",
 
   // Let imports like `from config import ...` resolve across the workspace
@@ -61,7 +62,8 @@
   ],
 
   // Run Python files from workspace root to keep relative paths stable
-  "python.terminal.executeInFileDir": false
+  "python.terminal.executeInFileDir": true,
+  "python.terminal.useEnvFile": true
 
 
 }
