@@ -24,6 +24,10 @@ This repository is experimental. The folder structure is usable for reference, b
 - Stata (https://www.stata.com/)
 - Git (https://git-scm.com/)
 
+## Useful Guides
+
+- Latex in VS Code by Paul K. Wintz (https://paulwintz.com/latex-in-vscode/)
+
 
 ## Folders
 
